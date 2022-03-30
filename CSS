@@ -1,0 +1,75 @@
+html, body {
+    margin: 0;
+
+}
+.container {
+    display: flex;
+    flex-flow: column;
+    height: 965px;
+    position: relative;
+    top: 60px;
+
+
+}
+.image{
+    background-image: url('https://images.unsplash.com/photo-1502920514313-52581002a659?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80');
+    background-size: cover;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    color: antiquewhite;
+}
+
+.quiz-container {
+    align-self: center;
+    display: grid;
+    grid-gap: 10px 10px;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 150px 150px 150px;
+
+}
+
+.quiz-item {
+    width: 150px;
+    height: 150px;
+    border-radius: 5%;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    color: rgb(255, 127, 39);
+    border-radius: 5%;
+    position: absolute;
+
+}
+.front{
+    background: rgb(255, 240, 235);
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back{
+    background: rgb(255, 127, 39);
+    color: antiquewhite;
+    z-index: 1;
+    transform: rotateY(180deg)
+}
+.quiz-item:hover {
+    transform: rotateY(180deg);
+}
+.container{
+    margin-top: -100px;
+    perspective: 1000px;
+}
