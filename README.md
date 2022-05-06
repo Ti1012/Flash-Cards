@@ -1,4 +1,4 @@
-JBA Javascript 
+Javascript, 
 Project Flashcards
 
 Learning outcomes
